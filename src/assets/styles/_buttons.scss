@@ -1,0 +1,9 @@
+.btn {
+  background-color: $primaryColor;
+  border: none;
+  padding: .5rem 1rem;
+  color: #fff;
+  &:hover {
+    cursor: pointer;
+  }
+}
