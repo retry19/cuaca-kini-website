@@ -131,6 +131,58 @@ html, body {
       }
     }
   }
+
+  [data-tab-content] {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin-top: 60px;
+    padding: 0;
+    .tab {
+      cursor: pointer;
+      padding: 10px;
+      color: #bbb;
+      font-weight: 400;
+      font-size: 1.2em;
+      &:hover {
+        color: #000;
+        border-bottom: 3px solid #000;
+        padding-bottom: 3px;
+      }
+      &.active {
+        color: #000;
+        border-bottom: 3px solid #000;
+        padding-bottom: 3px;
+      }
+    }
+  }
+
+  .tab-content {
+    margin-top: 25px;
+    margin-bottom: 35px;
+    padding: 0 30px;
+    tr {
+      font-size: 1.2em;
+      height: 40px;
+      td:nth-child(1) {
+        width: 60%;
+      }
+      td:nth-child(3) {
+        text-align: right;
+        width: 20%;
+        &::after {
+          content: '\00b0';
+        }
+      }
+    }
+  }
 }
 
 @keyframes sunrises {
