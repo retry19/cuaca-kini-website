@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
+@import './variables';
+@import './buttons';
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.App {
+  font-family: 'Poppins' !important;
+  margin: 0px;
+  #bg {
+    background-image: linear-gradient(to bottom left, #ffe4a5, #ffc45b);
+    width: 100%;
+    height: 1034px;
+    position: absolute;
+    z-index: -1;
+  }
+  nav {
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    a {
+      text-decoration: none;
+      font-size: 18;
+      font-weight: 600;
+      color: #fff;
+    }
+    .github {
+      background-image: url('../icon/icon-github.svg');
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  section#input {
+    margin-top: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    input {
+      margin: 10px auto;
+      font-family: Poppins;
+      font-weight: 600;
+      font-size: 14;
+      color: #fff;
+      height: 48px;
+      width: 70vw;
+      padding: 0px 20px;
+      background: none;
+      border-width: 2px;
+      border-color: #fff;
+      border-style: solid;
+      &::placeholder {
+        font-family: Poppins;
+        font-weight: 600;
+        font-size: 14;
+        color: #fff;
+      }
+    }
+  }
+
+  .sun {
+    margin-top: 445px;
+    height: 155px;
+    position: relative;
+    #sun {
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      width: 183px;
+      height: 183px;
+      background-color: #ffffff79;
+      background-image: url('../icon/sun.svg');
+      background-size: 80%;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 50%;
+      box-shadow: 
+        0 0 0 30px #ffffff10,
+        0 0 0 60px #ffffff10,
+        0 0 0 90px #ffffff10,
+        0 0 0 120px #ffffff10,
+        0 0 0 150px #ffffff10,
+        0 0 0 180px #ffffff10,
+        0 0 0 210px #ffffff10,
+        0 0 0 240px #ffffff10,
+        0 0 0 270px #ffffff10,;
+      animation: sunrises 2s infinite linear forwards, rays 2s 2s infinite linear;
+    }
+  }
+
+  .mainInfo {
+    position: absolute;
+    bottom: 0;
+    padding-left: 20px;
+    color: #fff;
+    h1 {
+      font-size: 5em;
+      font-weight: 500;
+      line-height: 1;
+      &::after {
+        content: '\00b0';
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+      }
+    }
+    p {
+      font-size: 1em;
+      font-weight: 600;
+    }
+    .location {
+      font-size: .8em;
+      font-weight: 400;
+      padding-left: 30px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      &::before {
+        content: url(../icon/nav.svg);
+        position: absolute;
+        left: 20px;
+        width: 30px;
+      }
+    }
+  }
+}
+
+@keyframes sunrises {
+  0% {
+    box-shadow: none;
+  }
+}
+@keyframes rays {
+  0% {
+    box-shadow: 
+      0 0 0 0px #ffffff10,
+      0 0 0 30px #ffffff10,
+      0 0 0 60px #ffffff10,
+      0 0 0 90px #ffffff10,
+      0 0 0 120px #ffffff10,
+      0 0 0 150px #ffffff10,
+      0 0 0 180px #ffffff10,
+      0 0 0 210px #ffffff10,
+      0 0 0 240px #ffffff10,;
+  } 
+  100% {
+    box-shadow: 
+      0 0 0 30px #ffffff10,
+      0 0 0 60px #ffffff10,
+      0 0 0 90px #ffffff10,
+      0 0 0 120px #ffffff10,
+      0 0 0 150px #ffffff10,
+      0 0 0 180px #ffffff10,
+      0 0 0 210px #ffffff10,
+      0 0 0 240px #ffffff10,
+      0 0 0 270px #ffffff10,;
+  }
+}
