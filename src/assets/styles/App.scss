@@ -60,6 +60,9 @@ html, body {
     @include desktop {
       margin-top: 30%;
     }
+    @include desktopL {
+      margin-top: 15%;
+    }
     input {
       margin: 10px auto;
       font-family: Poppins;
@@ -91,6 +94,9 @@ html, body {
     }
     @include desktop {
       margin-top: 320px;
+    }
+    @include desktopL {
+      margin-top: 430px;
     }
     #sun {
       position: absolute;
