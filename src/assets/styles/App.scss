@@ -51,6 +51,9 @@ html, body {
     @include tablet {
       margin-top: 40%;
     }
+    @include tabletLandscape {
+      margin-top: 35%;
+    }
     input {
       margin: 10px auto;
       font-family: Poppins;

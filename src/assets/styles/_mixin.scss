@@ -4,6 +4,12 @@
   }
 }
 
+@mixin tabletLandscape {
+  @media (min-width: #{$tabletLandscape}) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (min-width: #{$desktop}) {
     @content;
