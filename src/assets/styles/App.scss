@@ -30,6 +30,9 @@ html, body {
     @include tablet {
       padding: 18px 40px;
     }
+    @include desktop {
+      padding: 18px 60px;
+    }
     a {
       text-decoration: none;
       font-size: 18;
@@ -53,6 +56,9 @@ html, body {
     }
     @include tabletLandscape {
       margin-top: 35%;
+    }
+    @include desktop {
+      margin-top: 30%;
     }
     input {
       margin: 10px auto;
@@ -82,6 +88,9 @@ html, body {
     position: relative;
     @include tablet {
       margin-top: 340px;
+    }
+    @include desktop {
+      margin-top: 320px;
     }
     #sun {
       position: absolute;
