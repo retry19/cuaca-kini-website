@@ -34,17 +34,17 @@ class App extends Component {
         </nav>
   
         <section id="input">
-          <input list="provinsi" name="provinsi" placeholder="Pilih nama provinsi anda" />
-          <datalist id="provinsi">
-            <option value="Jawa Barat">Jawa Barat</option>
-            <option value="Jawa Timur">Jawa Timur</option>
-          </datalist>
-  
-          <input list="kota" name="kota" placeholder="Pilih nama kota anda" />
-          <datalist id="kota">
+          <select name="provinsi">
+            <option selected disabled>Pilih nama provinsi anda</option>
+            <option value="JawaBarat">Jawa Barat</option>
+            <option value="JawaTimur">Jawa Timur</option>
+          </select>
+
+          <select name="kota">
+            <option selected disabled>Pilih nama kota anda</option>
             <option value="Bandung">Bandung</option>
             <option value="Kuningan">Kuningan</option>
-          </datalist>
+          </select>
         </section>
   
         <div className="sun">

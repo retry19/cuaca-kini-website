@@ -63,7 +63,7 @@ html, body {
     @include desktopL {
       margin-top: 15%;
     }
-    input {
+    select {
       margin: 10px auto;
       font-family: Poppins;
       font-weight: 600;
@@ -76,11 +76,11 @@ html, body {
       border-width: 2px;
       border-color: #fff;
       border-style: solid;
-      &::placeholder {
+      option {
         font-family: Poppins;
-        font-weight: 600;
+        font-weight: 400;
         font-size: 14;
-        color: #fff;
+        color: #000;
       }
     }
   }
