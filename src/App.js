@@ -1,8 +1,14 @@
-import React, { Component } from 'react';
-import './assets/styles/App.scss';
+import React, { Component } from 'react'
+import Provinces from './utils/Provinces'
+import './assets/styles/App.scss'
 
 
 class App extends Component {
+  state = {
+    provinceSelected: null,
+    citySelected: null,
+  }
+
   componentDidMount() {
     this.tabDays() 
   }
@@ -22,6 +28,12 @@ class App extends Component {
     })
   }
 
+  handleProvincesChange = (e) => {
+    const province = e.target.value.replace(/\s/g, '')
+    const url = `http://data.bmkg.go.id/datamkg/MEWS/DigitalForecast/DigitalForecast-${province}.xml`
+    console.log(url)
+  }
+
   render() {
     return (
       <div className="App">
@@ -29,19 +41,18 @@ class App extends Component {
         <div id="bg"></div>
   
         <nav>
-          <a href="#">CuacaKini</a>
+          <a href="./">CuacaKini</a>
           <span className="github"></span>
         </nav>
   
         <section id="input">
-          <select name="province">
-            <option selected disabled>Pilih nama provinsi anda</option>
-            <option value="JawaBarat">Jawa Barat</option>
-            <option value="JawaTimur">Jawa Timur</option>
+          <select name="province" value={this.provinceSelected} defaultValue={'DEFAULT'} onChange={this.handleProvincesChange}>
+            <option value="DEFAULT" disabled>Pilih nama provinsi anda</option>
+            { Provinces.map(province => <option key={province} value={province}>{province}</option>) }
           </select>
 
-          <select name="city">
-            <option selected disabled>Pilih nama kota anda</option>
+          <select name="city" value={this.citySelected} defaultValue={'DEFAULT'}>
+            <option value="DEFAULT" disabled>Pilih nama kota anda</option>
             <option value="Bandung">Bandung</option>
             <option value="Kuningan">Kuningan</option>
           </select>
