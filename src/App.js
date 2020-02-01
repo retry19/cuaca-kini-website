@@ -34,13 +34,13 @@ class App extends Component {
         </nav>
   
         <section id="input">
-          <select name="provinsi">
+          <select name="province">
             <option selected disabled>Pilih nama provinsi anda</option>
             <option value="JawaBarat">Jawa Barat</option>
             <option value="JawaTimur">Jawa Timur</option>
           </select>
 
-          <select name="kota">
+          <select name="city">
             <option selected disabled>Pilih nama kota anda</option>
             <option value="Bandung">Bandung</option>
             <option value="Kuningan">Kuningan</option>
