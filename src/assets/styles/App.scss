@@ -133,7 +133,7 @@ html, body {
       padding-left: 40px;
     }
     h1 {
-      font-size: 5em;
+      font-size: 4em;
       font-weight: 500;
       line-height: 1;
       &::after {
@@ -183,7 +183,7 @@ html, body {
       padding: 10px;
       color: #bbb;
       font-weight: 400;
-      font-size: 1.2em;
+      font-size: 1em;
       &:hover {
         color: #000;
         border-bottom: 3px solid #000;
@@ -205,7 +205,7 @@ html, body {
       padding: 0 60px;
     }
     tr {
-      font-size: 1.2em;
+      font-size: 1em;
       height: 40px;
       td:nth-child(1) {
         width: 60%;
