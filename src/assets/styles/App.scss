@@ -23,6 +23,13 @@ html, body {
     position: absolute;
     z-index: -1;
   }
+  #bg-dark {
+    background-image: linear-gradient(to bottom left, #668FBB, #273039);
+    width: 100%;
+    height: 1034px;
+    position: absolute;
+    z-index: -1;
+  }
   nav {
     padding: 18px 20px;
     display: flex;
@@ -106,6 +113,30 @@ html, body {
       height: 183px;
       background-color: #ffffff79;
       background-image: url('../icon/sun.svg');
+      background-size: 80%;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 50%;
+      box-shadow: 
+        0 0 0 30px #ffffff10,
+        0 0 0 60px #ffffff10,
+        0 0 0 90px #ffffff10,
+        0 0 0 120px #ffffff10,
+        0 0 0 150px #ffffff10,
+        0 0 0 180px #ffffff10,
+        0 0 0 210px #ffffff10,
+        0 0 0 240px #ffffff10,
+        0 0 0 270px #ffffff10,;
+      animation: sunrises 2s infinite linear forwards, rays 2s 2s infinite linear;
+    }
+    #moon {
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      width: 183px;
+      height: 183px;
+      background-color: #ffffff79;
+      background-image: url('../icon/moon.svg');
       background-size: 80%;
       background-repeat: no-repeat;
       background-position: center;
@@ -206,16 +237,20 @@ html, body {
     }
     tr {
       font-size: 1em;
-      height: 40px;
+      height: 45px;
       td:nth-child(1) {
-        width: 60%;
+        width: 50%;
         @include tablet {
           width: 65%;
         }
       }
+      td:nth-child(2) {
+        text-align: right;
+        width: auto;  
+      }
       td:nth-child(3) {
         text-align: right;
-        width: 20%;
+        width: 15%;
         @include tablet {
           width: 30%;
         }
